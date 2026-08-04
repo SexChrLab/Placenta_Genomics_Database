@@ -13,5 +13,3 @@ Here we provide:
 
 Below, we show the summary of our analysis of the GEO entries related to placenta -omics. 
 
-
-TEST
