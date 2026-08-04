@@ -1,0 +1,5 @@
+NCBI’s Gene Expression Ominbus (GEO) was queried for all datasets related to the placenta and related pregnancy tissues using the following query: 
+
+```
+("placenta"[MeSH Terms] OR ("placenta"[MeSH Terms] OR ("placenta"[MeSH Terms] OR placenta[All Fields]))) OR ("trophoblasts"[MeSH Terms] OR ("trophoblasts"[MeSH Terms] OR ("trophoblasts"[MeSH Terms] OR trophoblast[All Fields]))) OR "chorionic villi"[All Fields] AND (("Expression profiling by array"[Filter] OR "Expression profiling by high throughput sequencing"[Filter] OR "Methylation profiling by array"[Filter] OR "Methylation profiling by high throughput sequencing"[Filter] OR "Protein profiling by Mass Spec"[Filter] OR "Protein profiling by protein array"[Filter])) AND "mammals"[porgn]
+```
