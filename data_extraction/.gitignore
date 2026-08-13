@@ -1,0 +1,24 @@
+.env
+.DS_Store
+__pycache__/
+*.pyc
+*.log
+~$*
+
+# Generated pipeline outputs
+data/
+outputs/
+raw_outputs/
+downloaded_papers/
+downloaded_supplements/
+processed_papers.json
+geo_master_access.xlsx
+gse_metadata_full*.xlsx
+gse_metadata_text_patch.xlsx
+ai_annotated*.xlsx
+geo_metadata_with_ai*.xlsx
+debug_failures.csv
+
+# Large local review artifacts
+*.rds
+gsm_pages/
