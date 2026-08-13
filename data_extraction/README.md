@@ -10,21 +10,20 @@ The goal is to produce a workbook that can be reviewed by researchers. The workb
 
 `pipeline/lib/` contains shared helpers for model calls, paper text lookup, and supplement parsing.
 
-`examples/` contains small example input files.
-
-`docs/` contains audit notes and handoff documentation.
+`examples/` contains a small input-format example.
 
 Generated data are intentionally not included in this clean project folder. Paper downloads, model outputs, logs, and final workbooks are produced when the pipeline is run.
 
 ## Inputs
 
 The pipeline expects a CSV file of GEO series IDs. The default name is `ids.csv`.
+This repository includes the full current run list at `ids.csv`.
 
 Use one GEO series ID per row in the first column. A header row is fine. For example, the first column can be named:
 
 `GEO Series ID (GSE___)`
 
-An example is provided at:
+The small format example is:
 
 `examples/ids.example.csv`
 
