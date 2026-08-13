@@ -1,0 +1,17 @@
+BiocManager
+GEOquery
+data.table
+dplyr
+furrr
+future
+httr
+jsonlite
+lubridate
+progressr
+purrr
+readr
+readxl
+rvest
+stringr
+tibble
+writexl
