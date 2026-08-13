@@ -278,13 +278,3 @@ Very large supplementary materials may exceed practical prompt limits. The curre
 `max_gsms_per_gse` controls whether the repair script limits sample-level GSM parsing. Leave it blank for a full run. Set it to a small number only for testing.
 
 `ids_file` can point to a different input ID file. If blank, the pipeline uses `ids.csv` in the project root.
-
-## Handoff checklist
-
-Before sharing results, confirm:
-
-- `.env` is not included.
-- downloaded papers and supplements are not committed unless there is a specific reason.
-- raw Gemini outputs are not included unless needed for audit.
-- the workbook uses simple sheet names and simple evidence columns.
-- the audit sheet separates current unresolved issues from raw candidate-link failures.
