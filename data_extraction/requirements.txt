@@ -1,0 +1,19 @@
+# Core
+openpyxl>=3.1.5
+requests>=2.33.0
+beautifulsoup4>=4.14.0
+
+# Paper fetching
+playwright>=1.58.0           # for PMC scraping (also: playwright install chromium)
+biopython>=1.83              # Entrez API in 04_download_papers.py
+
+# Text extraction
+PyMuPDF>=1.27                # PDF text extraction (imported as `fitz`)
+xlrd>=2.0.2                  # legacy .xls supplement extraction
+
+# AI models
+google-genai>=1.70.0
+
+# Data and workbook writing
+pandas>=2.0
+xlsxwriter>=3.1              # pandas excel writer engine
