@@ -61,6 +61,7 @@ python -m playwright install chromium
 ```
 
 R is also required for GEO extraction. The R scripts use Bioconductor/GEO-related packages such as `GEOquery`, plus common data packages.
+The full R package list is also recorded in `r_requirements.txt`.
 
 Install the R packages once:
 
@@ -76,6 +77,8 @@ if (!requireNamespace("BiocManager", quietly = TRUE)) {
 }
 BiocManager::install("GEOquery")
 ```
+
+Legacy `.doc` supplement parsing uses the macOS `textutil` command when those files are encountered. Other supplement formats are handled through Python packages or standard-library parsers.
 
 ## Running the pipeline
 
