@@ -1,0 +1,16 @@
+dataset_id,source,selection_reason
+ST001310,metabolomics_workbench,All supplied Workbench records
+ST000120,metabolomics_workbench,All supplied Workbench records
+ST001038,metabolomics_workbench,All supplied Workbench records
+ST002151,metabolomics_workbench,All supplied Workbench records
+ST001448,metabolomics_workbench,All supplied Workbench records
+ST004226,metabolomics_workbench,All supplied Workbench records
+ST000751,metabolomics_workbench,All supplied Workbench records
+ST003616,metabolomics_workbench,All supplied Workbench records
+ST003213,metabolomics_workbench,All supplied Workbench records
+ST000415,metabolomics_workbench,All supplied Workbench records
+MTBLS2148,metabolights,Human chorionic villi and pregnancy loss
+MTBLS3091,metabolights,Pig endometrium and placenta with multiple tissues
+MTBLS14423,metabolights,Mouse placenta with multiple assays
+MTBLS12795,metabolights,Placenta-related description but fecal dataset
+MTBLS346,metabolights,Plant search match to test relevance screening

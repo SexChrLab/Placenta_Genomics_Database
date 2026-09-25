@@ -1,0 +1,11 @@
+dataset_id,source,title,sample_source,organism,condition
+ST001310,metabolomics_workbench,C57 midgestation placental metabolomics analysis,Placenta,Mouse,Environmental exposure
+ST000120,metabolomics_workbench,Disruption of Zinc homeostasis can impair maternal glucocorticoid metabolism: consequences on the developing fetus,Placenta,Rat,
+ST001038,metabolomics_workbench,Global Metabolomics of the Placenta Reveals Distinct Metabolic Profiles between Maternal and Fetal Placental Tissues Following Delivery in Non-Labored Women,Placenta,Human,
+ST002151,metabolomics_workbench,"Integrative Exposomic, Transcriptomic, Epigenomic Analyses of Human Placental Samples Links Understudied Chemicals to Preeclampsia",Placenta,Human,Preeclampsia
+ST001448,metabolomics_workbench,Maternal Hypercortisolemia alters placental metabolism: NMR metabolomics,Placenta,Sheep,Hypercortisolemia
+ST004226,metabolomics_workbench,Mouse placenta metabolomics across healthy pregnancy: embryonic days e13.5-e18.5,Placenta,Mouse,
+ST000751,metabolomics_workbench,Mouse placentas-DEHP exposure,Placenta,Mouse,
+ST003616,metabolomics_workbench,Non-Targeted Analysis of the Chemical Exposome During Pregnancy Using High-Resolution Mass Spectrometry,Placenta,Human,Environmental exposure
+ST003213,metabolomics_workbench,The central role of creatine and polyamines in fetal growth restriction,Placenta,Human,Placenta disease
+ST000415,metabolomics_workbench,Toxicokinetics and Metabolomic Disrupting of the Flame Retardant Mixture Firemaster 550,Placenta,Rat,

@@ -1,0 +1,60 @@
+{
+  "MSV000086385": {
+    "status": "relevant",
+    "note": "Human placental tissue. Imported reanalysis dataset linked to PRIDE PXD014083; retain both accessions and review duplicate handling. Page warns the imported files may differ from the original PRIDE submission.",
+    "fields": [
+      {"field": "data_type", "value": "Proteomics", "quote": "This project aimed at missing protein identification from human placental tissue"},
+      {"field": "extracted_molecule", "value": "Protein", "quote": "low molecular proteins were enriched by C18 solid phase extraction, SDS-PAGE and MWCO filter"},
+      {"field": "extraction_protocol", "value": "For sample preparation, low molecular proteins were enriched by C18 solid phase extraction, SDS-PAGE and MWCO filter.", "quote": "For sample preparation, low molecular proteins were enriched by C18 solid phase extraction, SDS-PAGE and MWCO filter."},
+      {"field": "data_processing", "value": "Proteome Discoverer 2.2 software was used for data analysis to identify missing proteins.", "quote": "Proteome Discoverer 2.2 software was used for data analysis to identify missing proteins."}
+    ]
+  },
+  "MSV000085995": {
+    "status": "relevant",
+    "note": "Laser-isolated human trophoblast subtypes. The description discusses both transcriptional and protein measurements; the deposited assay should be distinguished from the broader paper. No publication is listed on this MassIVE page.",
+    "fields": [{"field": "data_type", "value": "Proteomics", "quote": "Using mass spectrometry, discovery of differentially expressed mRNAs was extended to the protein level."}]
+  },
+  "MSV000095456": {
+    "status": "relevant",
+    "note": "Human placental imaging with lipidomic, metabolomic, and proteomic measurements. One full-term placenta is explicitly described; tissue regions and repeated measurements are not additional donors.",
+    "fields": [
+      {"field": "sample_size_placenta", "value": 1, "quote": "we utilized a full-term placenta from an obese person"},
+      {"field": "data_type", "value": "Lipidomics; metabolomics; proteomics", "quote": "Lipidomic and metabolomic imaging by MALDI-MSI visualized molecular composition and dynamic activities across the tissue sections, mapping placental villous regions with enriched metabolic activity related to sterol lipids and fatty acid processing. Our complementary proteome profiling of mapped regions allowed us to capture region-specific enzymes."}
+    ]
+  },
+  "MSV000094962": {
+    "status": "relevant",
+    "note": "Includes matched maternal plasma and placental villous tissue. The source says n=4 each group; the pilot preserves that statement without treating file counts or an inferred group total as placenta sample size.",
+    "fields": [{"field": "data_type", "value": "Lipidomics", "quote": "Lipids were extracted and fatty acid composition of different lipid classes were analyzed by LC-MS/MS"}]
+  },
+  "MSV000100811": {
+    "status": "needs_review",
+    "note": "MassIVE explicitly labels this Proteomics despite RNA in the study title. The description lists sample labels but does not identify their tissue. Confirm whether the deposited samples are placenta, sperm, or another tissue before inclusion."
+  },
+  "phs001320.v1.p1": {
+    "status": "relevant",
+    "page_categories_checked": true,
+    "note": "First-trimester chorionic villi. The page reports 59 consented subjects; that is retained separately from placenta sample size. Molecular table contains instrument and library information.",
+    "fields": [{"field": "data_processing", "value": "Reads aligned to human (hg19) genome using GSNAP (version 2013-02-05)", "quote": "Reads aligned to human (hg19) genome using GSNAP (version 2013-02-05)"}]
+  },
+  "phs001782.v2.p1": {
+    "status": "relevant",
+    "page_categories_checked": true,
+    "note": "Placenta, cord tissue, and parental saliva occur in the study. Description reports 111 biopsies from 59 placentas for one dataset and 262 samples from 251 placentas for another. Keep those counts separate; donor overlap is not established. Total subjects is 802.",
+    "fields": [{"field": "sample_size_placenta", "value": "Whole-transcriptome dataset: 59 placentas (111 biopsies); targeted RNA-seq dataset: 251 placentas (262 samples). Overlap between datasets is not stated.", "quote": "The first dataset is the whole transcriptome RNA-Seq dataset of 111 biopsies (59 placentas) and genotyping of 96 genes. Birth length, weight, and placental weight for the children associated with this dataset are listed in the phenotype file (DOI: 10.1093/molbev/msz226). The second dataset includes targeted RNA-Seq of 262 samples (251 placentas) and targeted DNA-Seq for 766 genes."}]
+  },
+  "phs001886.v6.p1": {
+    "status": "relevant",
+    "note": "Version 6 supersedes version 5 in the supplied lists. Describes placenta, membranes, and myometrium across versions. Retain all six selected publications and linked GEO accession. Search-export molecular types emphasize genotypes and OTHER, while the current description names single-cell RNA sequencing, spatial transcriptomics, and CITE-seq; both representations are preserved.",
+    "fields": [{"field": "data_type", "value": "Single-cell RNA sequencing; spatial transcriptomics; CITE-seq", "quote": "using scRNAseq and spatial transcriptomics, and 3) IL-9 signaling by immune cells using CITE-seq"}]
+  },
+  "phs003122.v1.p1": {
+    "status": "needs_review",
+    "note": "Older-list-only study involving blastocysts, blastoids, and trophoblast models. Decide whether the resource includes these models. No selected publications are listed. Export molecular type is OTHER and public Study Design says Metagenomics, while the title identifies single-cell RNA sequencing; original labels are retained for review.",
+    "fields": [{"field": "data_type", "value": "Single-cell RNA sequencing", "quote": "Human Blastocyst 10X Single Cell RNA Sequencing"}]
+  },
+  "phs003002.v2.p1": {
+    "status": "likely_irrelevant",
+    "note": "Public description concerns pancreatic tumors and tumor-infiltrating immune cells. Chorionic gonadotropin appears in pregnancy-test eligibility criteria. Candidate for exclusion from a placenta dataset collection; retained in this pilot for review."
+  }
+}

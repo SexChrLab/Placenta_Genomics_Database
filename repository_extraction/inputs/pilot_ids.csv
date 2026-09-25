@@ -1,0 +1,11 @@
+dataset_id,source,source_url,selection_reason
+MSV000086385,massive,https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000086385,Placental tissue; imported dataset with an exact PRIDE cross-reference.
+MSV000085995,massive,https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000085995,Original trophoblast subtype study; compare sample and method detail.
+MSV000095456,massive,https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000095456,Mass spectrometry imaging; test mapping beyond conventional proteomics.
+MSV000094962,massive,https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000094962,Lipidomics with placenta and maternal blood; test tissue-specific counts.
+MSV000100811,massive,https://massive.ucsd.edu/ProteoSAFe/dataset.jsp?accession=MSV000100811,Title refers to germline RNA and placenta; test relevance and assay assumptions.
+phs001320.v1.p1,dbgap,https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs001320.v1.p1,Chorionic villi study with a public molecular-data table.
+phs001782.v2.p1,dbgap,https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs001782.v2.p1,Large cohort with multiple tissues; distinguish subjects and samples.
+phs001886.v6.p1,dbgap,https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs001886.v6.p1,Study version changed between the two supplied lists.
+phs003122.v1.p1,dbgap,https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs003122.v1.p1,Present only in the older list; assess possible loss from a narrower search.
+phs003002.v2.p1,dbgap,https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs003002.v2.p1,Pancreatic cancer search hit; investigate pregnancy-test terminology.
