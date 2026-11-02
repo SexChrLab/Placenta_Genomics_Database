@@ -1,0 +1,107 @@
+dbgap metadata extraction
+
+Run commands from the repository_extraction folder. Use run_dbgap.py for the full
+extraction; fetch_dbgap_metadata.py is the older pilot-only helper.
+
+Install the requirements once:
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+
+Extract every study in inputs/dbgap_ids.csv:
+.venv/bin/python run_dbgap.py
+
+Use a new input list:
+.venv/bin/python run_dbgap.py --ids-file inputs/my_ids.csv
+
+The input needs a dataset_id column containing versioned accessions, for example
+phs001320.v1.p1. The supplied list contains 33 studies. URLs are generated from
+the IDs. No API key, AI service or manual pilot annotation is used.
+
+Retry only incomplete or unattempted studies:
+.venv/bin/python run_dbgap.py --retry-failed
+
+Retry one study without removing the other rows from the export:
+.venv/bin/python run_dbgap.py --ids phs001886.v6.p1
+
+Use --root /path/to/run_folder to store responses and results outside the project.
+The input still defaults to the project's inputs/dbgap_ids.csv. To resume a
+previous run, pass the folder containing its saved responses and results:
+.venv/bin/python run_dbgap.py --root /path/to/run_folder --retry-failed
+
+Normal runs reuse validated responses and retry missing requests. Use --refresh
+to deliberately fetch fresh metadata, or --offline to work from saved responses
+without network access. These two options cannot be combined. Use a separate
+run folder when starting an unrelated input list.
+
+The results folder contains:
+dbgap_metadata.csv: the original 31 spreadsheet columns, in their original order.
+For dbGaP, Submission date contains the reported release date, not the date the
+study was submitted. The shared heading is kept to match the existing workbook.
+dbgap_status.csv: one row per input study, with errors and explanatory notes.
+dbgap_details.csv: release dates, molecular counts, complete deposited methods,
+tissue counts and publication contacts.
+dbgap_field_sources.csv: the source and extraction rule for each populated field.
+dbgap_results.json: all values, paired identifiers and contacts, and request details.
+
+The extraction rules are:
+
+GEO Series ID (GSE___): the dbGaP accession. The original heading is kept so the
+output matches the shared spreadsheet, although these IDs are not GEO accessions.
+Title and Assay description: the repository title and complete study description.
+The description is not an inferred assay-specific protocol.
+Data type: explicit molecular sample-use labels, the Molecular Data table, or
+an explicit label from a study-matched BioProject when neither is available.
+Organism: a study-matched BioProject or the linked SRA sample metadata.
+Sample size (placenta): distinct SRA sample records only when every retrieved
+sample explicitly says Placenta and the whole linked sample set was retrieved.
+This is not a count of unique donors or independent placentas. Mixed or uncertain
+tissues stay blank. Sample counts across assay types are never added together.
+Characteristics and Extracted molecule: explicitly labelled sample attributes.
+Extraction protocol: only an explicitly named extraction-protocol field. General
+methods text is kept intact in the details output instead of being mislabelled.
+Library Strategy, Library source, Library selection and Instrument model:
+structured SRA experiment fields, with no inference from the description.
+Data processing: explicitly named processing or alignment-software fields.
+SRA Study ID (raw data) and BioSample/BioProject ID: identifiers linked to the
+requested study. Unrelated parent-project records are not assigned to the study.
+File types/resources provided (list): listed resource types and filename extensions,
+plus available SRA file-type labels. Raw experimental files are not downloaded.
+Organization name, Contact name and Country: principal investigators and their
+listed affiliations. Organization retains the complete affiliation. Country is
+an explicit recognized country label, not an inferred sample location.
+E-mail(s): explicitly published author emails in linked PubMed records. Each email
+retains its author and PMID in the details output; it is not assumed to belong to
+the principal investigator. Data-access committee emails are not used here.
+PMID, DOI and PMCID: identifiers of the same first-linked PubMed record. A missing
+identifier is not borrowed from another paper. All PMIDs, All DOIs and All PMCIDs
+retain the other linked identifiers; the JSON preserves their per-paper pairing.
+Submission date: the release_date reported by dbGaP for the listed study accession.
+This is a release date, not a submission date. The main CSV retains the shared
+heading; the JSON, details CSV and field sources retain the
+release_date name. Saved release dates also populate the main CSV on offline
+runs. If a release date is unavailable, the cell stays blank. No dates are inferred.
+SuperSeries, Platform ID (list) and Last update date stay blank unless support is
+explicitly added for those fields. Release dates are not used as update dates.
+The summary field coverage describes the main CSV, including this date mapping.
+
+SRA metadata are the currently linked public records for a study accession, not
+a guaranteed historical snapshot of a particular dbGaP release. No fixed cap is
+applied to the number of linked SRA records or to deposited methods text.
+
+An extracted record means its retrieval checks were satisfied, not that all
+columns were reported. The script accepts a missing molecular endpoint as
+not reported only when the matching study page explicitly lists zero molecular
+datasets. A pending-data notice must also be explicitly present on the classic
+page. Request diagnostics and confirmation sources remain in the JSON;
+the status CSV explains these cases. Unconfirmed errors remain partial.
+
+Results are saved after each study. A failed refresh of an entire study keeps
+its previous saved values and marks the row partial. The previous checkpoint is
+retained when a study is updated. Retrying a subset keeps every input row in the
+combined export. Transient request failures receive bounded retries; rate limits
+stop the queue without discarding progress. Exit code 1 means that at least one
+input study remains partial, failed or unattempted; exit code 0 means all input
+studies passed their retrieval checks.
+
+Run the offline code tests with:
+.venv/bin/python -m unittest -v test_dbgap_run
