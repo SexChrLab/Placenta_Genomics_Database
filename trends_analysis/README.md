@@ -3,7 +3,6 @@
 This directory contains code, figures, and supplementary material for analyzing trends in the placenta database: placenta-related omics studies submitted to public data repositories between 2002 and 2025.
 
 ```
-.
 ├── geo_completed_sheet.xlsx                      # input data
 ├── Final_repository_metadata_combined_dbs.xlsx   # input data
 ├── code/
